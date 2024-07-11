@@ -2,6 +2,8 @@
 
 This repository contains the Oracle APEX template component plugin "KSCOPE24 Projects." This plugin is designed to enhance the project management capabilities within the Oracle APEX environment, particularly tailored for the KSCOPE 2024 event.
 
+![Alt text](https://github.com/Markuspg1/Oracle-Apex-Template-Component-Project-Management/blob/main/sample.png?raw=true "Title")
+
 ## Overview
 
 The KSCOPE24 Projects template component plugin allows you to integrate project management features into your Oracle APEX applications. It supports partial reports and includes CSS for styling.
