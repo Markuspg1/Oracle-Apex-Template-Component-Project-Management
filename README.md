@@ -44,18 +44,19 @@ After installing the plugin, you can add it to your Oracle APEX application by f
 Here is an example query that demonstrates how to use the plugin within your Oracle APEX application:
 
 ```sql
-begin
-    wwv_flow_imp_shared.create_plugin(
-        p_id => wwv_flow_imp.id(15319474348202833),
-        p_plugin_type => 'TEMPLATE COMPONENT',
-        p_theme_id => nvl(wwv_flow_application_install.get_theme_id, ''),
-        p_name => 'KSCOPE24_PROJECTS',
-        p_display_name => 'KSCOPE24-Projects',
-        p_supported_component_types => 'PARTIAL:REPORT',
-        p_css_file_urls => '#APP_FILES#style#MIN#.css'
-    );
-end;
-/
+SELECT
+    p.logo AS project_logo,
+    p.title AS project_title,
+    p.company AS project_company,
+    p.description AS project_description,
+    p.status AS status,
+    p.progress AS progress,
+    p.users AS users,
+    p.time_left AS time_left
+FROM
+    project_summary p
+ORDER BY
+    p.title;
 ```
 
 ## Contributions
