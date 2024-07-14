@@ -1,0 +1,103 @@
+.progress-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+.progress-bar-inner {
+    height: 100%;
+}
+
+.mk-card-wrap {
+    background-color: var(--u-color-14) !important;
+    border-radius: 16px !important;
+}
+
+.t-Card-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.t-Card-header .mk-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.t-Card-header .mk-subtitle {
+    margin: 0px !important;
+    font-size: 14px;
+}
+
+.progress-bar-container {
+    margin-top: 16px;
+}
+
+.t-Card-body {
+    padding: 24px !important;
+}
+
+.time-badge {
+    display: flex;
+}
+
+.avatars {
+    overflow: auto;
+}
+
+.mk-details-container {
+    display: flex;
+    margin-top: 16px;
+    padding-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mk-details {
+    width: 100%;
+}
+
+.mk-delayed {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffece6; /* Color de fondo naranja claro */
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: #e67e22; /* Color del texto naranja */
+}
+
+.mk-good {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff; /* Color de fondo naranja claro */
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: var(--u-normal-text); /* Color del texto naranja */
+}
+
+.mk-ontime {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff; /* Color de fondo naranja claro */
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: var(--u-normal-text); /* Color del texto naranja */
+}
+
+.mk-delayed .fa{
+    margin-right: 4px;
+}
+
+.mk-good .fa{
+    margin-right: 4px;
+}
+
+.mk-ontime .fa{
+    margin-right: 4px;
+}
