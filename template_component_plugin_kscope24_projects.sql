@@ -33,7 +33,7 @@ prompt APPLICATION 123 - ODTUG Kscope 24 - Live Makeover Using Template Directiv
 -- Application Export:
 --   Application:     123
 --   Name:            ODTUG Kscope 24 - Live Makeover Using Template Directives
---   Date and Time:   21:38 Friday July 5, 2024
+--   Date and Time:   14:17 Sunday July 14, 2024
 --   Exported By:     MPEREIRA
 --   Flashback:       0
 --   Export Type:     Component Export
@@ -152,11 +152,58 @@ wwv_flow_imp_shared.create_plugin(
 ,p_default_escape_mode=>'HTML'
 ,p_translate_this_template=>false
 ,p_api_version=>2
-,p_report_body_template=>'<ul class="t-Cards t-Cards--4cols t-Cards--basic">#APEX$ROWS#</ul>'
+,p_report_body_template=>'<ul class="t-Cards t-Cards--3cols t-Cards--basic">#APEX$ROWS#</ul>'
 ,p_report_row_template=>'<li class="t-Cards-item" #APEX$ROW_IDENTIFICATION#>#APEX$PARTIAL#</li>'
 ,p_report_placeholder_count=>3
 ,p_substitute_attributes=>true
 ,p_subscribe_plugin_settings=>true
+,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<h2>Overview</h2>',
+'    <p>This template component creates a card-like structure displaying project details, including an image, title, subtitle, description, progress bar, and user avatars. It supports dynamic content loading and conditional rendering based on provided'
+||' data.</p>',
+'',
+'    <h2>Template Structure</h2>',
+'    <p>The template includes:</p>',
+'    <ul>',
+'        <li><strong>Lazy Loading:</strong> Conditionally renders content based on lazy loading.</li>',
+'        <li><strong>Card Header:</strong> Displays the project logo, title, and subtitle.</li>',
+'        <li><strong>Card Body:</strong> Includes the project description, progress bar, time status, and user avatars.</li>',
+'    </ul>',
+'',
+'    <h2>Key Elements</h2>',
+'    <p><strong>Project Logo:</strong> <code>#PROJECT_LOGO#</code></p>',
+'    <p><strong>Project Title:</strong> <code>#PROJECT_TITLE#</code></p>',
+'    <p><strong>Project Company:</strong> <code>#PROJECT_COMPANY#</code></p>',
+'    <p><strong>Project Description:</strong> <code>#PROJECT_DESCRIPTION#</code></p>',
+'    <p><strong>Status:</strong> <code>#STATUS#</code></p>',
+'    <p><strong>Progress:</strong> <code>#PROGRESS#</code></p>',
+'    <p><strong>Users:</strong> <code>#USERS#</code></p>',
+'    <p><strong>Time Left:</strong> <code>#TIME_LEFT#</code></p>',
+'',
+'    <h2>Dummy Query Example</h2>',
+'    <p>To help developers understand how to use this template, here is a dummy query that includes all the elements used in the template:</p>',
+'    <pre>',
+'SELECT',
+'    p.logo AS project_logo,',
+'    p.title AS project_title,',
+'    p.company AS project_company,',
+'    p.description AS project_description,',
+'    p.status AS status,',
+'    p.progress AS progress,',
+'    p.users AS users,',
+'    p.time_left AS time_left',
+'FROM',
+'    project_summary p',
+'ORDER BY',
+'    p.title;',
+'    </pre>',
+'',
+'    <h2>How to Use</h2>',
+'    <ul>',
+'        <li><strong>Integrate Data:</strong> Ensure the <code>project_summary</code> table contains the necessary fields.</li>',
+'        <li><strong>Assign Variables:</strong> Map the query results to the respective template variables.</li>',
+'        <li><strong>Customize CSS:</strong> Adjust the CSS classes to fit your design requirements.</li>',
+'    </ul>'))
 ,p_version_identifier=>'1'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
@@ -167,20 +214,6 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_display_sequence=>50
 ,p_static_id=>'TITLE'
 ,p_prompt=>'Title'
-,p_attribute_type=>'SESSION STATE VALUE'
-,p_is_required=>false
-,p_escape_mode=>'HTML'
-,p_column_data_types=>'VARCHAR2'
-,p_is_translatable=>false
-);
-wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(15355329234873837)
-,p_plugin_id=>wwv_flow_imp.id(15319474348202833)
-,p_attribute_scope=>'COMPONENT'
-,p_attribute_sequence=>6
-,p_display_sequence=>60
-,p_static_id=>'DESCRIPTION'
-,p_prompt=>'Description'
 ,p_attribute_type=>'SESSION STATE VALUE'
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
@@ -265,6 +298,20 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_display_sequence=>120
 ,p_static_id=>'STATUS'
 ,p_prompt=>'Status'
+,p_attribute_type=>'SESSION STATE VALUE'
+,p_is_required=>false
+,p_escape_mode=>'HTML'
+,p_column_data_types=>'VARCHAR2'
+,p_is_translatable=>false
+);
+wwv_flow_imp_shared.create_plugin_attribute(
+ p_id=>wwv_flow_imp.id(18273198340691985)
+,p_plugin_id=>wwv_flow_imp.id(15319474348202833)
+,p_attribute_scope=>'COMPONENT'
+,p_attribute_sequence=>14
+,p_display_sequence=>140
+,p_static_id=>'DESCRIPTION'
+,p_prompt=>'Description'
 ,p_attribute_type=>'SESSION STATE VALUE'
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
