@@ -93,8 +93,8 @@ wwv_flow_imp_shared.create_plugin(
 '            </div>',
 '',
 '            <div class="t-Card-body">',
-'                {if DESCRIPCION/}',
-'                    <div class="t-Card-desc">#DESCRIPCION#</div>',
+'                {if DESCRIPTION/}',
+'                    <div class="t-Card-desc">#DESCRIPTION#</div>',
 '                {else/}',
 '                    <div class="t-Card-desc"></div>',
 '                {endif/}',
@@ -179,8 +179,8 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
-,p_static_id=>'DESCRIPCION'
-,p_prompt=>'Descripcion'
+,p_static_id=>'DESCRIPTION'
+,p_prompt=>'Description'
 ,p_attribute_type=>'SESSION STATE VALUE'
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
