@@ -1,6 +1,6 @@
 # Template Component Plugin: Project Management
 
-This repository contains the Oracle APEX template component plugin "Projects." This plugin is designed to enhance the project management capabilities within the Oracle APEX environment, particularly tailored for the webinars and events.
+This repository contains the Oracle APEX template component plugin "Projects." This plugin is designed to enhance the project management capabilities within the Oracle APEX environment, particularly tailored for webinars and events.
 
 ![Alt text](https://github.com/Markuspg1/Oracle-Apex-Template-Component-Project-Management/blob/main/sample.png?raw=true "Title")
 
